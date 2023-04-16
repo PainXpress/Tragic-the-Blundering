@@ -2,7 +2,7 @@ import pygame
 
 from modules.menu import MenuItem
 from modules.opponent import Opponent
-from player import Player
+from modules.player import Player
 from modules import settings
 
 # Initialize Pygame
