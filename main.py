@@ -1,6 +1,7 @@
 import pygame
 
 from modules import settings, menu
+from modules.game import untap_all_permanents
 from modules.settings import Settings
 
 # Call the function to untap all permanents
@@ -14,8 +15,8 @@ my_settings = Settings()
 screen = pygame.display.set_mode((my_settings.window_width, my_settings.window_height))
 
 # Set up the window
-window = pygame.display.set_mode((settings.window_width, settings.window_height))
-pygame.display.set_caption(settings.window_title)
+window = pygame.display.set_mode((1920, 1080))
+pygame.display.set_caption("Tragic The Blundering")
 
 # Display the menu
 menu.display_menu(window)

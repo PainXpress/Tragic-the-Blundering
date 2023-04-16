@@ -1,24 +1,23 @@
 import pygame
+from pygame import Surface, SurfaceType
 
 from modules.menu import MenuItem
 from modules.opponent import Opponent
 from modules.player import Player
 from modules import settings
 
-
-
 # Initialize Pygame
 pygame.init()
 
 # Set up the window
-screen = pygame.display.set_mode((settings.window_width, settings.window_height))
-pygame.display.set_caption(settings.window_title)
+screen = pygame.display.set_mode((1920, 1080))
+pygame.display.set_caption("Tragic The Blundering")
 
 # Load the background image
 background_image = pygame.image.load("assets/images/menu_background.png").convert()
 
 # Resize the background image to fit the window
-background_image = pygame.transform.scale(background_image, (settings.window_width, settings.window_height))
+background_image = pygame.transform.scale(background_image, (1920, 1080))
 
 # Create the game objects
 all_sprites = pygame.sprite.Group()
@@ -27,10 +26,12 @@ opponent = Opponent("Opponent")
 all_sprites.add(player)
 all_sprites.add(opponent)
 
+
 def untap_all_permanents(player):
     """Untap all of a player's permanents."""
     for permanent in player.permanents:
         permanent.tapped = False
+
 
 # Set up the game
 player.shuffle_library()
@@ -38,6 +39,7 @@ opponent.shuffle_library()
 for i in range(7):
     player.draw_card()
     opponent.draw_card()
+
 
 class Permanent:
     def __init__(self):
@@ -55,6 +57,7 @@ my_permanent.untap()
 
 # check if the permanent is untapped
 print(my_permanent.tapped)  # should print False
+
 
 # Create the menu
 class Menu:

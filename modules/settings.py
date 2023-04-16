@@ -25,3 +25,15 @@ class Settings:
         self.red = (255, 0, 0)
         self.green = (0, 255, 0)
         self.blue = (0, 0, 255)
+
+
+def window_width():
+    var = 800
+
+
+def window_height():
+    var = 600
+
+
+def window_title():
+    """Tragic the Blundering"""
