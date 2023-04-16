@@ -1,7 +1,7 @@
 import pygame
 
-from modules import settings, menu, game, opponent
-
+from modules import settings, menu
+from modules.settings import Settings
 
 # Call the function to untap all permanents
 untap_all_permanents()
@@ -10,9 +10,8 @@ untap_all_permanents()
 # Initialize Pygame
 pygame.init()
 
-settings = settings.Settings()
-window_width = settings.window_width
-window_height = settings.window_height
+my_settings = Settings()
+screen = pygame.display.set_mode((my_settings.window_width, my_settings.window_height))
 
 # Set up the window
 window = pygame.display.set_mode((settings.window_width, settings.window_height))
