@@ -11,14 +11,14 @@ from modules import settings
 pygame.init()
 
 # Set up the window
-screen = pygame.display.set_mode((settings.WINDOW_WIDTH, settings.WINDOW_HEIGHT))
-pygame.display.set_caption(settings.WINDOW_TITLE)
+screen = pygame.display.set_mode((settings.window_width, settings.window_height))
+pygame.display.set_caption(settings.window_title)
 
 # Load the background image
 background_image = pygame.image.load("assets/images/menu_background.png").convert()
 
 # Resize the background image to fit the window
-background_image = pygame.transform.scale(background_image, (settings.WINDOW_WIDTH, settings.WINDOW_HEIGHT))
+background_image = pygame.transform.scale(background_image, (settings.window_width, settings.window_height))
 
 # Create the game objects
 all_sprites = pygame.sprite.Group()
@@ -63,15 +63,15 @@ class Menu:
         self.background = pygame.image.load("assets/images/menu_background.png").convert()
 
         # Scale the background image to fit the screen
-        self.background = pygame.transform.scale(self.background, (settings.WINDOW_WIDTH, settings.WINDOW_HEIGHT))
+        self.background = pygame.transform.scale(self.background, (settings.window_width, settings.window_height))
 
         # Create font for menu items
         self.font = pygame.font.Font(None, 48)
 
         # Set up menu items
-        self.play_item = MenuItem("Play", self.font, (settings.WINDOW_WIDTH / 2, settings.WINDOW_HEIGHT / 2 - 50))
-        self.options_item = MenuItem("Options", self.font, (settings.WINDOW_WIDTH / 2, settings.WINDOW_HEIGHT / 2))
-        self.quit_item = MenuItem("Quit", self.font, (settings.WINDOW_WIDTH / 2, settings.WINDOW_HEIGHT / 2 + 50))
+        self.play_item = MenuItem("Play", self.font, (settings.window_width / 2, settings.window_height / 2 - 50))
+        self.options_item = MenuItem("Options", self.font, (settings.window_width / 2, settings.window_height / 2))
+        self.quit_item = MenuItem("Quit", self.font, (settings.window_width / 2, settings.window_height / 2 + 50))
 
         # Create list of menu items
         self.menu_items = [self.play_item, self.options_item, self.quit_item]
@@ -83,8 +83,8 @@ class Menu:
         for i, item in enumerate(self.menu_items):
             color = (255, 255, 255) if i != self.selected_item else (255, 0, 0)
             text = self.font.render(item.text, True, color)
-            x = (settings.WINDOW_WIDTH - text.get_width()) / 2
-            y = (settings.WINDOW_HEIGHT / 2) + i * 50
+            x = (settings.window_width - text.get_width()) / 2
+            y = (settings.window_height / 2) + i * 50
             self.surface.blit(text, (x, y))
 
         # Draw menu items on surface
