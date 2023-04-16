@@ -15,7 +15,7 @@ class Settings:
         self.player_mana = 0
 
         # Window settings
-        self.window_title = "Tragic the Blundering"
+        self.window_title = "Tragic-The-Blundering"
         self.window_width = 1920
         self.window_height = 1080
 
@@ -36,4 +36,4 @@ def window_height():
 
 
 def window_title():
-    """Tragic the Blundering"""
+    """Tragic-The-Blundering"""

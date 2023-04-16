@@ -16,7 +16,7 @@ screen = pygame.display.set_mode((my_settings.window_width, my_settings.window_h
 
 # Set up the window
 window = pygame.display.set_mode((1920, 1080))
-pygame.display.set_caption("Tragic The Blundering")
+pygame.display.set_caption("Tragic-The-Blundering")
 
 # Display the menu
 menu.display_menu(window)
