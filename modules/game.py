@@ -1,7 +1,7 @@
 import pygame
 
 from modules.menu import MenuItem
-from opponent import Opponent
+from modules.opponent import Opponent
 from player import Player
 from modules import settings
 
