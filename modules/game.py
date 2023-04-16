@@ -27,6 +27,11 @@ opponent = Opponent("Opponent")
 all_sprites.add(player)
 all_sprites.add(opponent)
 
+def untap_all_permanents(player):
+    """Untap all of a player's permanents."""
+    for permanent in player.permanents:
+        permanent.tapped = False
+
 # Set up the game
 player.shuffle_library()
 opponent.shuffle_library()
