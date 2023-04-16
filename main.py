@@ -1,11 +1,11 @@
 import pygame
 
 from modules import settings, menu
-from modules.game import untap_all_permanents
+import modules.game
 from modules.settings import Settings
 
 # Call the function to untap all permanents
-untap_all_permanents()
+modules.game.untap_all_permanents()
 
 
 # Initialize Pygame

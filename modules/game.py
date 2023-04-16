@@ -14,7 +14,8 @@ screen = pygame.display.set_mode((1920, 1080))
 pygame.display.set_caption("Tragic The Blundering")
 
 # Load the background image
-background_image = pygame.image.load("assets/images/menu_background.png").convert()
+background_image = pygame.image.load('C:\Users\JasonPerry\Desktop\PyCharm\Tragic the Blundering\assets\images\menu '
+                                     'background.png').convert()
 
 # Resize the background image to fit the window
 background_image = pygame.transform.scale(background_image, (1920, 1080))
