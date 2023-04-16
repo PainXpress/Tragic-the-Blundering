@@ -5,6 +5,8 @@ from modules.opponent import Opponent
 from modules.player import Player
 from modules import settings
 
+
+
 # Initialize Pygame
 pygame.init()
 
@@ -58,7 +60,7 @@ class Menu:
         self.selected_item = 0
 
         # Load the background image
-        self.background = pygame.image.load("assets/images/menu background.png").convert()
+        self.background = pygame.image.load("assets/images/menu_background.png").convert()
 
         # Scale the background image to fit the screen
         self.background = pygame.transform.scale(self.background, (settings.WINDOW_WIDTH, settings.WINDOW_HEIGHT))
@@ -121,8 +123,6 @@ def handle_menu_clicks(menu_items):
             elif i == 2:
 
                 pygame.quit()
-
-                quit()
 
 
 def handle_game_events(player, opponent):
@@ -232,3 +232,6 @@ menu = Menu(screen)
 # Run the menu loop
 
 run_menu_loop(menu)
+
+if event.type == pygame.QUIT:
+    menu_running = False
